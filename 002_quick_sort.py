@@ -7,7 +7,7 @@
 
 def pivot_first(array, lb, ub):
     """
-    Pivot selection method: returns the first element of the array
+    Pivot selection method: returns the index of the first element of the array
     :param array:
     :param lb: lower bound of the array
     :param ub: upper bound of the array
@@ -18,7 +18,7 @@ def pivot_first(array, lb, ub):
 
 def pivot_last(array, lb, ub):
     """
-    Pivot selection method: returns the last element of the array
+    Pivot selection method: returns the index of the last element of the array
     :param array:
     :param lb: lower bound of the array
     :param ub: upper bound of the array
@@ -29,7 +29,7 @@ def pivot_last(array, lb, ub):
 
 def pivot_median_of_three(array, lb, ub):
     """
-    Pivot selection method: returns the median elements among the first, last and middle elements of the array
+    Pivot selection method: returns the index of the median element among the first, last and middle elements of the array
     :param array:
     :param lb: lower bound of the array
     :param ub: upper bound of the array
