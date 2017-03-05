@@ -18,6 +18,12 @@
 // For instance: "2 510" is an edge going from 2 to 510.
 // The total number of vertices in the graph has to be known!
 
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <vector>
+#include <algorithm>
+
 /*
 * ------------------ *
 * CLASS DECLARATIONS *
