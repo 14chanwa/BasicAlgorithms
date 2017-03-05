@@ -41,13 +41,6 @@ public:
 
 	inline Vertex(int _index) : _index(_index), _explored(false) {}
 	inline ~Vertex() {}
-
-	inline void addInEdge(Edge* e) { _in_edges.push_back(e); }
-	inline void addOutEdge(Edge* e) { _out_edges.push_back(e); }
-	void removeInEdge(Edge* e);
-	void removeOutEdge(Edge* e);
-	inline void clearInEdges() { _in_edges.clear(); }
-	inline void clearOutEdges() { _out_edges.clear(); }
 };
 
 class Edge {
@@ -102,20 +95,6 @@ private:
 * METHODS IMPLEMENTATIONS *
 * ----------------------- *
 */
-
-void Vertex::removeInEdge(Edge* e) {
-	std::vector<Edge*>::iterator it = std::find(_in_edges.begin(), _in_edges.end(), e);
-	if (it != _in_edges.end()) {
-		_in_edges.erase(it);
-	}
-}
-
-void Vertex::removeOutEdge(Edge* e) {
-	std::vector<Edge*>::iterator it = std::find(_out_edges.begin(), _out_edges.end(), e);
-	if (it != _out_edges.end()) {
-		_out_edges.erase(it);
-	}
-}
 
 Graph::~Graph() {
 	for (std::vector<Vertex*>::iterator it = _vertexes.begin(); it < _vertexes.end(); it++) {
@@ -209,8 +188,8 @@ int main() {
 			iss >> tail;
 			iss >> head;
 			Edge* edge = new Edge(g->_vertexes.at(head - 1), g->_vertexes.at(tail - 1));
-			g->_vertexes.at(head - 1)->addInEdge(edge);
-			g->_vertexes.at(tail - 1)->addOutEdge(edge);
+			g->_vertexes.at(head - 1)->_in_edges.push_back(edge);
+			g->_vertexes.at(tail - 1)->_out_edges.push_back(edge);
 		}
 		myfile.close();
 		delete line;
