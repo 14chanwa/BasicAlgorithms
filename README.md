@@ -1,7 +1,7 @@
 # BasicAlgorithms
 A set of basic algorithms such as sorts, graphs searches...
 
-| File ID    | Code |    Name    | Description |
+|  ID    | Code |    Name    | Description |
 | ------------- | --- | -------- | ---------- |
 |   1 | Py | Count inversions and merge sort | Given an int array, merge sort (recursively) and count inversions. |
 |   2 | Py | Quick sort | An implementation of the quick sort algorithm with 3 different pivot selection methods. |
