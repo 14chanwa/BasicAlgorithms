@@ -261,8 +261,8 @@ T Heap_Max<T>::pop() {
 			else {
 				break;
 			}
-			// If one child
 		}
+		// If one child
 		else {
 			if (get_element(current_index * 2) > get_element(current_index)) {
 				switch_indexes(current_index, current_index * 2);
