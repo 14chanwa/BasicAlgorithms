@@ -1,6 +1,5 @@
 # BasicAlgorithms
-A set of basic primitives such as sorts, graphs searches...
-Each bash of files with the same ID runs independantly.
+A set of basic primitives such as sorts, graphs searches, data structures...
 
 |  ID    | Code |    Name    | Description |
 | ------------- | ---- | ----------------------- | ---------- |
