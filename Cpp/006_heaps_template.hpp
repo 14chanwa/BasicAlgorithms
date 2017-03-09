@@ -1,11 +1,11 @@
 /*
-*	Created by 14chanwa on 2017.03.08
+* Created by 14chanwa on 2017.03.08
 */
 
 /*
-*	Heaps
-*	Implements min (resp. max) heaps in C++. 
-*	These classes support extraction of the min (resp. max) element in O(1) time, insertion, deletion in O(log(n)) time.
+* Heaps
+* Implements min (resp. max) heaps in C++. 
+* These classes support extraction of the min (resp. max) element in O(1) time, insertion, deletion in O(log(n)) time.
 */
 
 #ifndef HEAPS_H
@@ -29,25 +29,25 @@ public:
 	inline Heap() {}
 
 	// Basic operations
-	T peek();											// returns the summit of the heap
-	virtual void push(T) = 0;							// inserts a new element in the heap
-	virtual T pop() = 0;								// removes the summit of the heap
-	inline std::vector<T>* get_elements();				// copies elements to a new vector
+	T peek();						// returns the summit of the heap
+	virtual void push(T) = 0;				// inserts a new element in the heap
+	virtual T pop() = 0;					// removes the summit of the heap
+	inline std::vector<T>* get_elements();			// copies elements to a new vector
 
 	// Creation
-	virtual void heapify(std::vector<T>&) = 0;			// given a vector of elements, creates a valid heap
+	virtual void heapify(std::vector<T>&) = 0;		// given a vector of elements, creates a valid heap
 
 	// Inspection
 	inline int size() { return m_elements.size(); }		// returns the size of the heap
 	inline bool empty() { return m_elements.empty(); }	// checks whether the heap is empty
-	virtual bool check() = 0;							// checks the validity of the heap
+	virtual bool check() = 0;				// checks the validity of the heap
 
-	void print_heap();									// prints the heap in the console (as a tree form)
+	void print_heap();					// prints the heap in the console (as a tree form)
 
 protected:
-	std::vector<T> m_elements;							// the elements of the heap. Convention: array numbering starts at 1
-	void switch_indexes(int, int);						// given 2 indexes, swap the corresponding elements
-	T get_element(int);									// given an index, returns the corresponding element
+	std::vector<T> m_elements;				// the elements of the heap. Convention: array numbering starts at 1
+	void switch_indexes(int, int);				// given 2 indexes, swap the corresponding elements
+	T get_element(int);					// given an index, returns the corresponding element
 };
 
 /*
