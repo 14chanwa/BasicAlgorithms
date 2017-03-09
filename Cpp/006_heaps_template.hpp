@@ -31,7 +31,7 @@ public:
 	// Basic operations
 	T peek();						// returns the summit of the heap
 	virtual void push(T) = 0;				// inserts a new element in the heap
-	virtual T pop() = 0;					// removes the summit of the heap
+	virtual T pop() = 0;					// returns and removes the summit of the heap
 	inline std::vector<T>* get_elements();			// copies elements to a new vector
 
 	// Creation
